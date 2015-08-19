@@ -1,0 +1,74 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: GATHERMD.py:126
+msgid "---"
+msgstr ""
+"---"
+
+#: GATHERMD.py:172
+msgid "Filetypes must be one or more of spss, sas, and stata."
+msgstr ""
+"È necessario specificare uno o più tipi di file di spss, sas e stata."
+
+#: GATHERMD.py:180
+msgid "File containing the variable"
+msgstr ""
+"File contenente la variabile"
+
+#: GATHERMD.py:182
+msgid "Variable Name"
+msgstr ""
+"Nome di variabile"
+
+#: GATHERMD.py:184
+msgid "Variable Label"
+msgstr ""
+"Etichetta di variabile"
+
+#: GATHERMD.py:221
+msgid "Not found: %s"
+msgstr ""
+"Non trovato: %s"
+
+#: GATHERMD.py:247
+msgid "Invalid filenamepattern: %s"
+msgstr ""
+"Modello nome file non valido: %s"
+
+#: GATHERMD.py:272
+msgid "File could not be opened, skipping: %s"
+msgstr ""
+"Impossibile aprire il file, verrà tralasciato: %s"
+
+
+
