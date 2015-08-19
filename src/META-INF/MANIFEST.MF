@@ -1,0 +1,17 @@
+Name: GATHERMD
+Dialog-Specs: gathermd.spd
+Command-Specs: gathermd.xml
+Code-Files: GATHERMD.py
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Build a dataset of variable information from multiple dataset
+ s.
+Description: This procedure builds a dataset containing the variable n
+ ames, labels, and optionally selected custom variable attributes from
+  one or more IBM SPSS Statistics, SAS, or Stata data files.
+Author: JKP, IBM SPSS
+Version: 1.3.6
+Product-Version: 18
+Date: 1/2/2014
+Categories: Extension Commands, Python
+Plugins: Python
+Translation-Catalogues: lang
