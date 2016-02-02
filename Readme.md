@@ -1,11 +1,13 @@
 # GATHERMD
-## Build a dataset of variable information from multiple dataset
- This procedure builds a dataset containing the variable n
+## Build a dataset of variable information from multiple datasets.
+ This procedure builds a dataset containing the variable names, labels, and optionally selected custom variable attributes from one or more IBM SPSS Statistics, SAS, or Stata data files.
 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
+
+Note: For users with IBM SPSS Statistics version 19 or higher, the GATHERMD extension is installed as part of IBM SPSS Statistics-Essentials for Python. 
 
 ---
 Installation intructions
