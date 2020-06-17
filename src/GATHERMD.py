@@ -3,14 +3,14 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2014
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
 # ************************************************************************/
 
 # Construct a dataset listing the variables and selected properties for a collection of data files
-from __future__ import with_statement
+
 
 # 05-23-2008 Original version - JKP
 # 04-29-2009 Add file handle support
@@ -30,8 +30,8 @@ from extension import Template, Syntax
 try:
     from extension import processcmd
 except:
-    print """This command requires a newer version of extension.py.  Please download it from
-    SPSS Developer Central and replace the existing file"""
+    print("""This command requires a newer version of extension.py.  Please download it from
+    SPSS Developer Central and replace the existing file""")
     raise
     
 class DataStep(object):
@@ -54,7 +54,7 @@ def Run(args):
     
     
     ###print args   #debug
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
     
     helptext=r"""GATHERMD
     Create and activate a dataset whose cases are variable names and labels 
@@ -128,7 +128,7 @@ def Run(args):
         def _(msg):
             return msg
 
-    if args.has_key("HELP"):
+    if "HELP" in args:
         #print helptext
         helper()
     else:
@@ -151,7 +151,7 @@ def helper():
     # webbrowser.open seems not to work well
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print("Help file not found:" + helpspec)
+        print(("Help file not found:" + helpspec))
 try:    #override
     from extension import helper
 except:
@@ -188,7 +188,7 @@ def gather(files, filetypes=["spss"], filenamepattern=None, dsname=None,attrlist
     filetypes = [f.lower() for f in filetypes]
     for ft in filetypes:
         if not ft in ["spss", "sas", "stata"]:
-            raise ValueError, _("Filetypes must be one or more of spss, sas, and stata.")
+            raise ValueError(_("Filetypes must be one or more of spss, sas, and stata."))
     dsvars = {"source":"source", "variablename":"VariableName", "variablelabel":"variableLabel"}
     
     with DataStep():
@@ -232,11 +232,11 @@ def gather(files, filetypes=["spss"], filenamepattern=None, dsname=None,attrlist
                 for f in fnames:
                     try:
                         addvarinfo(os.path.join(dirpath, f))
-                    except EnvironmentError, e:
+                    except EnvironmentError as e:
                         notfound.append(e.args[0])
         else:
-            if not isinstance(item, unicode):
-                item = unicode(item, encoding)
+            if not isinstance(item, str):
+                item = str(item, encoding)
             notfound.append(_("Not found: %s") % item)
 
     spss.Submit("DATASET ACTIVATE %s." % dsn)
@@ -263,7 +263,7 @@ def makeaddinfo(dsname, filetypes, filenamepattern, dsvars, attrindexes, attrlen
         try:
             pat = re.compile(filenamepattern, re.IGNORECASE)
         except:
-            raise ValueError, _("Invalid filenamepattern: %s") % filenamepattern
+            raise ValueError(_("Invalid filenamepattern: %s") % filenamepattern)
     else:
         pat = None
     ll = len(dsvars)
@@ -286,8 +286,8 @@ def makeaddinfo(dsname, filetypes, filenamepattern, dsvars, attrindexes, attrlen
                         spss.Submit(spsscmd[ft] % filespec)
                         spss.Submit("DATASET NAME @__GATHERMD__.")
                     except:
-                        if not isinstance(filespec, unicode):
-                            filespec = unicode(filespec, encoding)
+                        if not isinstance(filespec, str):
+                            filespec = str(filespec, encoding)
                         raise EnvironmentError(_("File could not be opened, skipping: %s") % filespec)
                     break
         else:
@@ -326,7 +326,7 @@ def addunique(dsdict, key):
     # make a version of key that is unique in the dictionary values and a legal variable name length
     i=0
     keymod = spssaux.truncatestring(key, 64)
-    while keymod.lower() in [k.lower() for k in dsdict.values()]:
+    while keymod.lower() in [k.lower() for k in list(dsdict.values())]:
         keymod = spssaux.truncatestring(key, 59) + "_" + str(i)
         i += 1
     dsdict[key1] = keymod
