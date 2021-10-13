@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Variableninformationen sammeln</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Datendateien nach Variableninformationen durchsuchen</h1>
+
+  <p>Mit diesem Dialogfeld können Sie ein Dataset erstellen, das Informationen zu den Variablenwörterbüchern in mindestens einer IBM® SPSS® Statistics-, SAS- oder Stata-Datei enthält.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Wählen Sie zur Ausführung dieser Prozedur folgende Optionen aus den Menüs aus:</p>
+
+  <p class="menuselection">Dateien<br>
+  Variableninformationen sammeln...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Alle Variablen in den ausgewählten Dateien werden eingeschlossen.</p>
+
+  <p><span class="runinhead">Zu durchsuchendes Verzeichnis.</span> Geben Sie das zu durchsuchende Verzeichnis ein. Die zugehörigen Unterverzeichnisse werden ebenfalls durchsucht.</p>
+
+  <p><span class="runinhead">Dateinamensmuster.</span> Das Muster eines regulären Ausdrucks kann verwendet werden, um die verarbeiteten Dateien zu filtern. Mit <i>auto</i> beispielsweise werden nur die Dateien ausgegeben, deren Namen mit "auto" beginnt. Bei dem Muster <i>.*auto</i> sind alle Dateinamen zulässig, die "auto" enthalten.</p>
+
+  <p class="bullet">•&nbsp;Reguläre Ausdrücke sind nicht dasselbe wie Platzhalterzeichen für Dateinamen, die in vielen Betriebssystemen verwendet werden. So werden beispielsweise mit <i>abc*</i> alle Namen gefunden, die mit <i>ab</i> beginnen:</p>
+
+  <p class="bullet">•&nbsp;Bei regulären Ausdrücken wird die Groß- und Kleinschreibung nicht beachtet und sie werden auf den Dateinamen ohne die Erweiterung angewendet.</p>
+
+  <p>Eine nützliche Quelle für eine vollständige Erläuterung regulärer Ausdrücke (in englischer Sprache) ist
+  http://www.amk.ca/python/howto/regex/. Wenn kein Muster angegeben ist, werden alle Dateien mit den angegebenen Typen verarbeitet.</p>
+
+  <p><span class="runinhead">Zu durchsuchende Dateitypen.</span> Wählen Sie die Kontrollkästchen für die gewünschten Dateitypen aus. Es handelt sich um folgende Dateitypen:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01 und .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">Liste der einzuschließenden benutzerdefinierten Attribute.</span> Geben Sie die Namen aller benutzerdefinierten Attribute ein, deren Werte in die Ausgabe eingeschlossen werden sollen.</p>
+
+  <p><span class="runinhead">Maximale Länge für Attributwerte.</span> Benutzerdefinierte Attributwerte können bis zu 32.767 Byte lang sein. Werte werden standardmäßig auf 256 Byte gekürzt. Geben Sie einen anderen Wert ein, um diesen Grenzwert zu ändern.</p>
+
+  <h2>Weitere Funktionen</h2>
+
+  <p>In diesem Dialogfeld wird Syntax für den Erweiterungsbefehl GATHERMD generiert. Führen Sie folgende Syntax aus, um Hilfe für diesen Befehl anzuzeigen:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>In der Syntax kann eine Liste der Verzeichnisse angegeben werden.
+
+  <h2>Anforderungen</h2>
+
+  <p>Für dieses Dialogfeld sind das Integrations Plug-in for Python und der Erweiterungsbefehl GATHERMD erforderlich. Bei IBM SPSS Statistics 19 und höher werden das Plug-in und der Erweiterungsbefehl zusammen mit dem Paket "Essentials for Python" installiert. Weitere Informationen finden Sie im Hilfesystem zu IBM SPSS Statistics unter "Core-System &gt; Häufig gestellte Fragen" im Thema "Beziehen von Integrations-Plug-ins". Wenn Sie den Erweiterungsbefehl GATHERMD von SPSS Community heruntergeladen haben, befolgen Sie bitte die Anweisungen in der zugehörigen Readme-Datei.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

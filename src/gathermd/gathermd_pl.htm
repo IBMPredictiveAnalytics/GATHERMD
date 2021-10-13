@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Zbierz informacje o zmiennych</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Skanowanie plików danych w celu pozyskania informacji o zmiennych</h1>
+
+  <p>Korzystając z tego okna dialogowego, można utworzyć zbiór danych zawierający informacje o słownikach zmiennych występujących w jednym lub kilku plikach danych programu IBM® SPSS® Statistics, SAS lub Stata.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Aby uruchomić tę procedurę, wybierz z menu opcję:</p>
+
+  <p class="menuselection">&nbsp;Plik<br>
+  &nbsp;&nbsp;Zbierz informacje o zmiennych...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Wszystkie zmienne w wybranych plikach zostaną uwzględnione.</p>
+
+  <p><span class="runinhead">Przeszukiwany katalog.</span> Wprowadź nazwę przeszukiwanego katalogu. Jego podkatalogi są również przeszukiwane.</p>
+
+  <p><span class="runinhead">Maska nazwy pliku.</span> Maska w postaci wyrażenia regularnego może być wykorzystana do filtrowania przetwarzanych plików. Na przykład, wyrażenie <i>car</i> powinno ograniczać pliki, których nazwa rozpoczyna się od ciągu znaków &quot;car&quot;. Maska <i>.*car</i> powinna akceptować dowolne nazwy plików, które zawierają ciąg &quot;car&quot; w nazwie.</p>
+
+  <p class="bullet">•&nbsp;Wyrażenia regularne nie są tym samym co wyrażenia wieloznaczne nazw plików, występujące w wielu systemach operacyjnych. Na przykład, <i>abc*</i> pokrywa dowolny ciąg w nazwie zaczynającej się od <i>ab</i>: co literalnie oznacza
+<i>ab</i> , po których nic nie ma lub jest wiele znaków c.</p>
+
+  <p class="bullet">•&nbsp;Wyrażenie regularne nie rozróżnia wielkości liter i odnosi się do nazwy pliku bez jego rozszerzenia.</p>
+
+  <p>Pełny opis wyrażeń regularnych można znaleźć na stronie http://www.amk.ca/python/howto/regex/. Jeżeli nie została określona żadna maska, wówczas będą przetwarzane wszystkie pliki określonych typów.</p>
+
+  <p><span class="runinhead">Skanowane typy plików.</span> Zaznacz odpowiednie opcje przy pożądanych typach plików. Dostępnymi typami plików są:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01 i
+  .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">Lista uwzględnianych atrybutów niestandardowych.</span> Podaj nazwy dowolnych, niestandardowych atrybutów, których wartości powinny znaleźć się w wyniku działania procedury.</p>
+
+  <p><span class="runinhead">Maksymalna długość wartości atrybutów.</span> Niestandardowe wartości atrybutów mogą mieć długość do 32767 bajtów. Domyślnie są one skracane do 256 bajtów. Wprowadź inną wartość, aby zmienić to ograniczenie.</p>
+
+  <h2>Funkcje dodatkowe</h2>
+
+  <p>To okno dialogowe generuje składnię komendy rozszerzającej GATHERMD. Aby wyświetlić pomoc dotyczącą tej komendy, uruchom następującą komendę:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>W komendzie można określić listę katalogów.
+
+  <h2>Wymagania</h2>
+
+  <p>To okno dialogowe wymaga zainstalowania wtyczki integracji dla języka Python oraz komendy rozszerzającej GATHERMD. Dla wersji programu IBM SPSS Statistics 19 i nowszych, wtyczka i komenda rozszerzająca są instalowane wraz z pakietem Essentials for Python. W celu uzyskania dalszych informacji, zobacz temat W jaki sposób uzyskać wtyczki integracyjne, wybierając opcję System podstawowy &gt; Często zadawane pytania w systemie pomocy IBM SPSS Statistics. Jeśli komenda rozszerzająca GATHERMD została pobrana z serwisu SPSS Community, należy postępować zgodnie z instrukcjami w odpowiednim pliku readme.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>変数情報を収集</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>変数情報のデータ ファイルをスキャンする</h1>
+
+  <p>このダイアログ ボックスを使用して、1 または複数の IBMR SPSSR Statistics、SAS、または Stata ファイルの変数ディクショナリに関する情報を含んだデータセットを作成できます。
+</p>
+
+  <p class="step"><span class="step-glyph">►</span>この手順を実行するには、メニューから次のコマンドをを選択します。</p>
+
+  <p class="menuselection">&nbsp;ファイル<br>
+  変数情報を収集</p>
+
+  <p class="step"><span class="step-glyph">►</span> 選択したファイルのすべての変数が含まれます。</p>
+
+  <p><span class="runinhead">検索するディレクトリ:</span> 検索するディレクトリを入力します。サブディレクトリも検索されます。
+</p>
+
+  <p><span class="runinhead">ファイル名のパターン:</span> 正規表現のパターンを使用して、処理するファイルをフィルタリングできます。たとえば、<i>car</i> は、ファイルを名前が「car」で始まるファイルに制限します。パターン <i>.*car</i> は、「car」を含むファイル名を受け入れます。  
+</p>
+
+  <p class="bullet">•&nbsp;正規表現は、多くのオペレーティング システムのファイル名のワイルドカードと同じではありません。たとえば、<i>abc*</i> は <i>ab</i> で始まるどんな名前にも一致します。<i>ab</i> の後に 0 または c が続いてもかまいません。
+</p>
+
+  <p class="bullet">•&nbsp;正規表現は大文字と小文字を区別しません。拡張子を除いたファイルの名前に適用されます。</p>
+
+  <p>正規表現の詳細な説明については、役立つ資料の 1 つとして
+  http://www.amk.ca/python/howto/regex/ があります。パターンが指定されていない場合、指定した種類のすべてのファイルが処理されます。
+</p>
+
+  <p><span class="runinhead">スキャンするファイル形式:</span>  該当するファイル形式のボックスをオンにします。ファイル形式は次のとおりです。
+</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav、.por</p>
+
+  <p class="bullet">•&nbsp;SAS:.sas7bdat、.sd7、.sd2、.ssd01、および .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">含めるカスタム属性のリスト:</span> 出力に含まれるカスタム属性の名前を入力します。
+</p>
+
+  <p><span class="runinhead">属性値の最大長:</span> カスタム属性値の長さは最大 32767 バイトです。デフォルトでは、256 バイトで切り捨てられます。この制限値を変更するには、異なる値を入力してください。</p>
+
+  <h2>その他の機能</h2>
+
+  <p>このダイアログは、GATHERMD 拡張コマンドのシンタックスを生成します。このコマンドのヘルプを表示するには、次のシンタックスを実行します。</p>
+
+  <p class="codeblock">GATHERMD /HELP</p>シンタックスでは、辞書のリストを指定できます。<h2>要件</h2>
+
+  <p>このダイアログには Integration Plug-In for Python と GATHERMD 拡張コマンドが必要です。IBM SPSS Statistics 19 以上の場合、Plug-in と拡張コマンドが Essentials for Python パッケージとともにインストールされます。詳しくは、IBM SPSS Statistics ヘルプ システムの「コア システム」&gt;「よくある質問」の『Integration Plug-In の取得方法』を参照してください。SPSS コミュニティーから GATHERMD 拡張コマンドをダウンロードした場合、関連する readme ファイルの指示に従ってください。</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>
