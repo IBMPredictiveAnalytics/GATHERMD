@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>收集變數資訊</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>掃描資料檔以取得變數資訊</h1>
+
+  <p>您可以使用此對話框建立資料集，其中包含一或多個 IBM® SPSS® Statistics、SAS 或 Stata 檔案中的變數字典相關資訊。</p>
+
+  <p class="step"><span class="step-glyph">►</span>若要執行此程序，請從功能表選擇：</p>
+
+  <p class="menuselection">&nbsp;檔案<br>
+  &nbsp;&nbsp;收集變數資訊...</p>
+
+  <p class="step"><span class="step-glyph">►</span> 包含所選檔案中的所有變數。</p>
+
+  <p><span class="runinhead">要搜尋的目錄。</span> 輸入要搜尋的目錄。也會搜尋子目錄。</p>
+
+  <p><span class="runinhead">檔名型樣。</span> 可使用正規表示式型樣來過濾處理的檔案。例如，<i>car</i> 可將檔案限制為名稱以 "car" 開頭的檔案。型樣 <i>.*car</i> 可接受包含 "car" 的任何檔名。</p>
+
+  <p class="bullet">•&nbsp;正規表示式與在許多作業系統中找到的檔名萬用字元不同。例如，<i>abc*</i> 將與以 <i>ab</i> 開頭的任何名稱相符：它表示 <i>ab</i> 之後有零個或更多個 c。</p>
+
+  <p class="bullet">•&nbsp;正規表示式不區分大小寫，並且適用於沒有副檔名的檔案名稱。</p>
+
+  <p>如需正規表示式的完整說明，請參閱 http://www.amk.ca/python/howto/regex/。如果沒有提供任何型樣，則會處理指定類型的所有檔案。</p>
+
+  <p><span class="runinhead">要掃描的檔案類型。</span> 勾選所需檔案類型的方框。檔案類型為：</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics：.sav、.por</p>
+
+  <p class="bullet">•&nbsp;SAS：.sas7bdat、.sd7、.sd2、.ssd01 和 .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata：.dta</p>
+
+  <p><span class="runinhead">要包含的自訂屬性清單。</span> 輸入要將其值包含在輸出中的任何自訂屬性名稱。</p>
+
+  <p><span class="runinhead">屬性值的最大長度。</span> 自訂屬性值長度最多可以是 32767 個位元組。依預設會將值截斷為 256 個位元組。輸入不同的值以變更此限制。</p>
+
+  <h2>其他特性</h2>
+
+  <p>此對話框會產生適用於 GATHERMD 延伸指令的語法。若要顯示此指令的說明，請執行下列語法：</p>
+
+  <p class="codeblock">GATHERMD /HELP。</p>在語法中，可指定字典清單。<h2>需求</h2>
+
+  <p>此對話框需要 Integration Plug-In for Python 及 GATHERMD 延伸指令。對於 IBM SPSS Statistics 19 及更高版本，Plug-In 及延伸指令會隨 Essentials for Python 套件一起安裝。如需相關資訊，請參閱 IBM SPSS Statistics 說明系統中「核心系統」&gt;「常見問題」下的「如何取得 Integration Plug-In」。如果您已從 SPSS 社群下載 GATHERMD 延伸指令，請遵循相關 Readme 檔中的指示。</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

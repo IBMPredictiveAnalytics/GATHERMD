@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Collecte d'informations sur les variables</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Analyser les fichiers de données pour des informations sur les variables</h1>
+
+  <p>Cette boîte de dialogue permet de créer un jeu de données contenant des informations sur les dictionnaires de variables dans un ou plusieurs fichiers IBM® SPSS® Statistics, SAS ou Stata.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Pour exécuter cette procédure, dans les menus, choisissez :</p>
+
+  <p class="menuselection">&nbsp;Fichiers<br>
+  &nbsp;&nbsp;Rassembler des informations sur les variables...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Toutes les variables des fichiers sélectionnés sont incluses.</p>
+
+  <p><span class="runinhead">Répertoire de recherche :</span> Indiquez le répertoire de recherche. La recherche est également effectuée dans ses sous-répertoires.</p>
+
+  <p><span class="runinhead">Modèle de nom de fichier :</span> Un motif d'expression standard peut être utilisé pour filtrer les fichiers traités. Par exemple, <i>voiture</i> limite les fichiers à ceux dont le nom commence par "voiture". Le motif <i>.*voiture</i> accepte n'importe quel nom de fichier contenant le terme « voiture ».</p>
+
+  <p class="bullet">•&nbsp;Les expressions standard ne sont pas les mêmes que les caractères génériques du nom de fichier qui se trouvent dans de nombreux systèmes d'exploitation. Par exemple, <i>abc*</i> trouera tous les noms commençant par <i>ab</i> : cela signifie littéralement <i>ab</i> suivi de zéro ou de plusieurs c.</p>
+
+  <p class="bullet">•&nbsp;L'expression standard n'est pas sensible à la casse et est appliquée au nom du fichier sans extension.</p>
+
+  <p>Pour obtenir une explication complète des expressions régulières, voir http://www.amk.ca/python/howto/regex/. Si aucun motif n'est donné, tous les fichiers des types spécifiés sont traités.</p>
+
+  <p><span class="runinhead">Types de fichiers à rechercher :</span> Cochez les cases correspondantes aux types de fichiers désirés. Les types de fichiers sont :</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics : .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS : .sas7bdat, .sd7, .sd2, .ssd01 et .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata : .dta</p>
+
+  <p><span class="runinhead">Liste d'attributs personnalisés à inclure :</span> Entrez les noms de chaque attribut personnalisé dont les valeurs doivent être incluses dans la sortie.</p>
+
+  <p><span class="runinhead">Longueur maximale des valeurs d'attribut :</span> La valeur des attributs personnalisés peut atteindre une longueur de 32767 octets. Par défaut, les valeurs sont tronquées à 256 octets. Saisissez une autre valeur pour modifier cette limite.</p>
+
+  <h2>Fonctions supplémentaires</h2>
+
+  <p>Cette boîte de dialogue génère une syntaxe pour la commande d'extension GATHERMD. Pour afficher l'aide de cette commande, exécutez la syntaxe suivante :</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>Dans la syntaxe, une liste des répertoires peut être spécifiée.
+
+  <h2>Conditions requises</h2>
+
+  <p>Cette boîte de dialogue requiert le plug-in d'intégration pour Python et la commande d'extension GATHERMD. Pour IBM SPSS Statistics 19 et versions ultérieures, le plug-in et la commande d'extension sont installés avec le pack Essentials for Python. Pour plus d'informations, reportez-vous à
+Comment obtenir des plug-in d'intégration dans Système central &gt; Questions fréquemment posées dans le système d'aide d'IBM SPSS Statistics. Si vous avez téléchargé la commande d'extension GATHERMD depuis la communauté SPSS, suivez les instructions dans le fichier associé Lisezmoi.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

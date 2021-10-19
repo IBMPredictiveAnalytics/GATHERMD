@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Raccogli informazioni variabili</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Esegui scansione dei file di dati alla ricerca di informazioni sulle variabili</h1>
+
+  <p>Tramite questa finestra di dialogo
+è possibile creare un dataset contenente le informazioni sui dizionari delle variabili
+in uno o più file IBM® SPSS® Statistics, SAS o Stata.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Per eseguire questa procedura, dai menu scegliere:</p>
+
+  <p class="menuselection">&nbsp;File<br>
+  &nbsp;&nbsp;Raccogli informazioni variabili...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Sono incluse tutte le variabili nei file selezionati.</p>
+
+  <p><span class="runinhead">Cartella in cui effettuare la ricerca.</span> Immettere una cartella in cui effettuare la ricerca. La ricerca viene eseguita anche nelle sottocartelle.</p>
+
+  <p><span class="runinhead">Modello nome file.</span> Un modello di espressione regolare può essere utilizzato per filtrare i file elaborati. Ad
+esempio, <i>car</i> limiterà i file a quelli il cui nome inizia con "car". Il modello <i>.*car</i> accetta qualsiasi nome file contenente
+"car".</p>
+
+  <p class="bullet">•&nbsp;Le espressioni regolari non sono identiche ai caratteri jolly dei nomi file presenti in molti sistemi operativi. Ad esempio,
+<i>abc*</i> corrisponde a qualsiasi nome che inizia con <i>ab</i>:
+letteralmente significa <i>ab</i> seguito da zero o più c.</p>
+
+  <p class="bullet">•&nbsp;L'espressione regolare non riconosce la differenza tra maiuscole e minuscole e si applica al nome del file senza estensione.</p>
+
+  <p>Per una spiegazione esaustiva delle espressioni regolari, fare riferimento alla pagina http://www.amk.ca/python/howto/regex/. Se non viene
+fornito alcun modello, vengono elaborati tutti i file dei tipi specificati.</p>
+
+  <p><span class="runinhead">Tipi di file di cui eseguire la scansione.</span> Selezionare le caselle relative ai tipi di file desiderati. I tipi di file sono:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01 e
+  .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">Elenco degli attributi personalizzati da includere.</span> Immettere
+i nomi degli attributi personalizzati i cui valori devono essere inclusi nell'output.</p>
+
+  <p><span class="runinhead">Lunghezza massima dei valori degli attributi.</span> I valori degli attributi personalizzati possono contenere fino a 32767 byte. Per impostazione predefinita i valori vengono troncati a 256 byte. Immettere
+un valore differente per modificare questo limite.</p>
+
+  <h2>Funzioni aggiuntive</h2>
+
+  <p>Questa finestra di dialogo genera la sintassi del comando di estensione GATHERMD. Per visualizzare la guida per questo comando, utilizzare la sintassi riportata di seguito:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>Nella sintassi è possibile specificare un elenco di cartelle.
+
+  <h2>Requisiti</h2>
+
+  <p>Questa finestra di dialogo richiede Integration Plug-In for Python e il comando di estensione GATHERMD. Per IBM SPSS Statistics 19 e
+versioni successive, il plug-in e il comando di estensione vengono installati con il package
+Essentials for Python. Per ulteriori informazioni, consultare Come ottenere i plug-in di integrazione
+in Sistema principale &gt; Domande frequenti nella guida in linea di IBM SPSS Statistics. Se il comando di estensione GATHERMD è stato scaricato dalla Comunità SPSS, seguire le istruzioni nel file readme associato.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

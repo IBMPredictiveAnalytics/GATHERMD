@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Collect Variable Information</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Scan Data Files for Variable Information</h1>
+
+  <p>Using this dialog box you can create a dataset containing
+  information about the variable dictionaries in one or more IBM®
+  SPSS® Statistics, SAS, or Stata files.</p>
+
+  <p class="step"><span class="step-glyph">►</span>To run this
+  procedure, from the menus choose:</p>
+
+  <p class="menuselection">&nbsp;Files<br>
+  &nbsp;&nbsp;Collect Variable Information...</p>
+
+  <p class="step"><span class="step-glyph">►</span> All variables
+  in the selected files are included.</p>
+
+  <p><span class="runinhead">Directory to Search.</span> Enter a
+  directory to search. Its subdirectories are also searched.</p>
+
+  <p><span class="runinhead">File Name Pattern.</span> A regular
+  expression pattern can be used to filter the files processed. For
+  example, <i>car</i> would limit the files to those whose name
+  starts with "car". The pattern <i>.*car</i> would accept any
+  filenames containing "car".</p>
+
+  <p class="bullet">•&nbsp;Regular expressions are not the same as
+  the filename wildcards found in many operating systems. For
+  example, <i>abc*</i> will match any name starting with <i>ab</i>:
+  it means literally <i>ab</i> followed by zero or more c's.</p>
+
+  <p class="bullet">•&nbsp;The regular expression is not case
+  sensitive, and it is applied to the name of the file without the
+  extension.</p>
+
+  <p>For a full explanation of regular expressions, one good source
+  is http://www.amk.ca/python/howto/regex/. If no pattern is given,
+  all files of the specified types are processed.</p>
+
+  <p><span class="runinhead">File Types to Scan.</span> Check the
+  boxes for the desired file types. The file types are:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01, and
+  .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">List of Custom Attributes to
+  Include.</span> Enter the names of any custom attributes whose
+  values should be included in the output.</p>
+
+  <p><span class="runinhead">Maximum Length for Attribute
+  Values.</span> Custom attribute values can be up to 32767 bytes
+  long. By default values are truncated to 256 bytes. Enter a
+  different value to change this limit.</p>
+
+  <h2>Additional Features</h2>
+
+  <p>This dialog generates syntax for the GATHERMD extension
+  command. To display help for this command, run the following
+  syntax:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>In syntax, a list of
+  directories can be specified.
+
+  <h2>Requirements</h2>
+
+  <p>This dialog requires the Integration Plug-In for Python and
+  the GATHERMD extension command. For IBM SPSS Statistics 19 and
+  higher, the Plug-In and the extension command are installed with
+  the Essentials for Python package. For more information, see How
+  to Get Integration Plug-Ins, under Core System &gt; Frequently
+  Asked Questions in the IBM SPSS Statistics Help system. If you
+  downloaded the GATHERMD extension command from the SPSS
+  Community, then please follow the instructions in the associated
+  readme file.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

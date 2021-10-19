@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Coletar informações da variável</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Varrer arquivos de dados para informações da variável</h1>
+
+  <p>Usando esta caixa de diálogo, é possível criar um conjunto de dados contendo informações sobre os dicionários de variáveis em um ou mais arquivos IBM® SPSS® Statistics, SA ou Stata.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Para executar este procedimento,   nos menus, escolha:</p>
+
+  <p class="menuselection">Arquivos<br>
+  &nbsp;&nbsp;Coletar Informações de Variável...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Todas as variáveis   nos arquivos selecionados estão incluídas.</p>
+
+  <p><span class="runinhead">Diretório para Procurar.</span> Insira   um diretório para procurar. Os respectivos subdiretórios também são pesquisados.</p>
+
+  <p><span class="runinhead">Padrão de Nome do Arquivo.</span> Um   padrão de expressão regular pode ser usado para filtrar os arquivos   processados. Por exemplo, <i>car</i> limitaria os arquivos aqueles   cujos nomes começam com "car". O padrão <i>.*car</i> aceitaria nomes   de arquivos contendo "car".</p>
+
+  <p class="bullet">•&nbsp;Expressões regulares não são o mesmo que   curingas de nome de arquivo localizados em vários sistemas operacionais. Por   exemplo, <i>abc*</i> faria a correspondência de qualquer nome começando   com <i>ab</i>: isso significa literalmente <i>ab</i> seguido por zero ou   mais c's.</p>
+
+  <p class="bullet">•&nbsp;A expressão regular não faz distinção   entre maiúsculas e minúsculas e é aplicada ao nome do arquivo   sem a extensão.</p>
+
+  <p>Para obter uma explicação completa sobre expressões regulares, uma boa fonte é o endereço http://www.amk.ca/python/howto/regex/. Se não for fornecido nenhum padrão, todos os arquivos do tipo especificado serão processados.</p>
+
+  <p><span class="runinhead">Tipos de Arquivo para Varrer.</span> Marque   as caixas para os tipos de arquivo desejados. Os tipos de arquivo são:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01 e   .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">Lista de Atributos Customizados   para Incluir.</span> Insira os nomes de quaisquer atributos   customizados cujos valores devem ser incluídos na saída.</p>
+
+  <p><span class="runinhead">Comprimento Máximo para Valores de   Atributo.</span> Valores de atributos customizados podem ter até 32767 bytes de comprimento. Por padrão, os valores são truncados em 256 bytes. Insira um valor diferente para alterar este limite.</p>
+
+  <h2>Recursos adicionais</h2>
+
+  <p>Esta caixa de diálogo gera sintaxe para o comando de extensão GATHERMD. Para exibir ajuda para este comando, execute a seguinte sintaxe:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>Na sintaxe, é possível especificar uma lista de diretórios.
+
+  <h2>Requisitos</h2>
+
+  <p>Esta caixa de diálogo exige o plug-in de integração para Python e o comando de extensão GATHERMD. Para o IBM SPSS Statistics 19 e posterior, o Plug-in e o comando de extensão são instalados com o pacote Essentials for Python. Para obter informações adicionais, consulte Como Obter Integration Plug-In, no Sistema Principal &gt; Perguntas mais Frequentes no sistema de ajuda do IBM SPSS Statistics Help. Se você tiver feito download do comando de extensão GATHERMD da Comunidade SPSS, siga as instruções do arquivo Leia-me associado.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

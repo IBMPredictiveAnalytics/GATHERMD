@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Recopilar información sobre variables</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Explorar archivos de datos buscando información de variables</h1>
+
+  <p>Con este cuadro de diálogo puede crear un conjunto de datos que contenga   información sobre los diccionarios de variables de uno o más archivos de IBM®   SPSS® Statistics, SAS o Stata.</p>
+
+  <p class="step"><span class="step-glyph">►</span>Para ejecutar este procedimiento, desde los menús seleccione:</p>
+
+  <p class="menuselection">Archivos<br>
+  &nbsp;&nbsp;Recopilar información sobre variables...</p>
+
+  <p class="step"><span class="step-glyph">►</span> Se incluyen todas las   variables de los archivos seleccionados.</p>
+
+  <p><span class="runinhead">Directorio de búsqueda.</span> Especifique un   directorio donde desee buscar. Se incluyen también los subdirectorios.</p>
+
+  <p><span class="runinhead">Patrón de nombre de archivo.</span> Se puede utilizar   un patrón de expresión regular para filtrar los archivos procesados. Por   ejemplo, si especifica <i>car</i> se limitaría la búsqueda a los archivos   cuyo nombre empiece por "car". El patrón <i>.*car</i> acepta los nombres   de archivo que contengan "car".</p>
+
+  <p class="bullet">•&nbsp;Las expresiones regulares no son lo mismo   que los comodines para nombres de archivo que encontramos en muchos sistemas operativos. Por   ejemplo, <i>abc*</i> coincide con cualquier nombre que empiece por <i>ab</i>:   significa literalmente <i>ab</i> seguido de cero o más letras c.</p>
+
+  <p class="bullet">•&nbsp;Una expresión regular no es sensible a mayúsculas y minúsculas   y se aplica al nombre de archivo sin la extensión.</p>
+
+  <p>Para obtener una explicación completa de las expresiones regulares, se   recomienda consultar http://www.amk.ca/python/howto/regex/. Si no se especifica ningún patrón,   se procesan todos los archivos de los tipos especificados.</p>
+
+  <p><span class="runinhead">Tipos de archivos a explorar.</span> Marque las casillas de los   tipos de archivo deseados. Los tipos de archivo disponibles son:</p>
+
+  <p class="bullet">•&nbsp;IBM SPSS Statistics: .sav, .por</p>
+
+  <p class="bullet">•&nbsp;SAS: .sas7bdat, .sd7, .sd2, .ssd01 y   .xpt</p>
+
+  <p class="bullet">•&nbsp;Stata: .dta</p>
+
+  <p><span class="runinhead">Lista de atributos personalizados que se   incluirán.</span> Introduzca los nombres de los atributos personalizados   cuyos valores desea incluir en los resultados.</p>
+
+  <p><span class="runinhead">Longitud máxima de los valores de los   atributos.</span> Los valores de los atributos personalizados pueden tener hasta 32767 bytes   de longitud. De forma predeterminada, los valores se truncan a 256 bytes. Especifique un   valor distinto para cambiar este límite.</p>
+
+  <h2>Características adicionales</h2>
+
+  <p>Este diálogo genera sintaxis para el comando de extensión GATHERMD. Para mostrar la ayuda de este comando, ejecute la siguiente sintaxis:</p>
+
+  <p class="codeblock">GATHERMD /HELP.</p>En sintaxis, se puede especificar   una lista de directorios.
+
+  <h2>Requisitos</h2>
+
+  <p>Este cuadro de diálogo requiere el complemento de integración para Python y el comando de extensión GATHERMD. Para IBM SPSS Statistics 19 y versiones posteriores, el complemento y el comando de extensión se instalan con el paquete Essentials for Python. Si desea más información, consulte Cómo obtener complementos de integración, en Sistema principal &gt; Preguntas más frecuentes en el sistema de ayuda de IBM SPSS Statistics. Si ha descargado el comando de extensión GATHERMD de la Comunidad de SPSS, siga las instrucciones del archivo léeme asociado.</p><br>
+  <hr>
+
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

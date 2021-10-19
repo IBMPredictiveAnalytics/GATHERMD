@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" debug="false" version="1.0" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="gathermd" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="gathermd" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="gathermd_action" imagePath="IBMdialogicon.png" label="Collect Variable Information" labelKey="gathermd_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="gathermd_action" offset="15" showIcon="true" spssMenu="File"/>
+		</Controls>
+	</UserInterface>
+	<Node id="gathermd" label="Collect Variable Information from Data Files" labelKey="gathermd.LABEL" type="modelBuilder">
+		<Properties>
+			<Property name="gathermd" syntax="GATHERMD %%filespecs%%&#10;%%filetypes%% %%attrlength%% %%dataset%%&#10;%%filenamepattern%% &#10;%%attributes%%"/>
+			<Property description="false" name="gathermd_modal"/>
+			<Property defaultValue="" description="Enter a directory name or regular expression for files to scan" descriptionKey="filespecs_tooltip.LABEL" filespecs_filter="All File Types (*.*)|*.*|A^" label="Directory  to Search:" labelKey="filespecs.LABEL" name="filespecs" syntax="%%ThisValue%%" valueType="string"/>
+			<Property description="" descriptionKey="filetypes_tooltip.LABEL" isRequired="true" label="File Types to Scan" labelKey="filetypes.LABEL" name="filetypes" syntax="/OPTIONS FILETYPES=%%ThisValue%%"/>
+			<Property defaultValue="true" description="Includes SPSS Statistics sav and por files" descriptionKey="spss_tooltip.LABEL" label="SPSS Statistics" labelKey="spss.LABEL" name="spss" syntax="spss±" valueType="boolean"/>
+			<Property defaultValue="false" description="Includes sas7bdat, sd7, sd2, ssd01, and xpt files" descriptionKey="sas_tooltip.LABEL" label="SAS" labelKey="sas.LABEL" name="sas" syntax="sas±" valueType="boolean"/>
+			<Property defaultValue="false" description="Includes dta files" descriptionKey="stata_tooltip.LABEL" label="Stata" labelKey="stata.LABEL" name="stata" syntax="stata±" valueType="boolean"/>
+			<Property defaultValue="" description="Enter a name for the new dataset that will contain the results" descriptionKey="dataset_tooltip.LABEL" isRequired="true" label="Dataset Name for Results:" labelKey="dataset.LABEL" name="dataset" syntax="DSNAME = %%ThisValue%%" valueType="fieldName"/>
+			<Property defaultValue="" description="Enter the names of any custom attributes to be included in the output" descriptionKey="attributes_tooltip.LABEL" label="List of Custom Attributes  to Include:" labelKey="attributes.LABEL" name="attributes" syntax="/ATTRIBUTES %%ThisValue%%" valueType="string"/>
+			<Property defaultValue="256" description="Custom attribute values will be truncated to this length in the output dataset" descriptionKey="attrlength_tooltip.LABEL" isRequired="true" label="Maximum Length for Attribute Values:" labelKey="attrlength.LABEL" max="32767" min="1" name="attrlength" syntax="ATTRLENGTH=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="" description="Enter a file name regular expression to limit the files searched" descriptionKey="filenamepattern_tooltip.LABEL" label="File Name Pattern:" labelKey="filenamepattern.LABEL" name="filenamepattern" syntax="FILENAMEPATTERN=&quot;%%ThisValue%%&quot;" valueType="string"/>
+		</Properties>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="gathermd.htm">
+					<PropertiesPanel>
+						<ServerDirectoryChooserControl mnemonic="D" mnemonicKey="filespecs_mnemonic.VALUE" mode="open" property="filespecs">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</ServerDirectoryChooserControl>
+						<PropertiesPanel id="filetypes" label="File Types to Scan" labelKey="filetypes.LABEL">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+							<CheckBoxControl mnemonic="S" mnemonicKey="spss_mnemonic.VALUE" property="spss">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							</CheckBoxControl>
+							<CheckBoxControl mnemonic="A" mnemonicKey="sas_mnemonic.VALUE" property="sas">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+							</CheckBoxControl>
+							<CheckBoxControl mnemonic="T" mnemonicKey="stata_mnemonic.VALUE" property="stata">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+							</CheckBoxControl>
+						</PropertiesPanel>
+						<TextBoxControl mnemonic="E" mnemonicKey="dataset_mnemonic.VALUE" property="dataset">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="1" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+						</TextBoxControl>
+						<TextBoxControl mnemonic="L" mnemonicKey="attributes_mnemonic.VALUE" property="attributes">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="5" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<TextBoxControl mnemonic="M" mnemonicKey="attrlength_mnemonic.VALUE" property="attrlength">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="6" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<StaticText text="This dialog requires the\nIntegration Plug-In for Python." textKey="item_31.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="7" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="The file name pattern can be a\nregular expression. See help\nfor how to write these." textKey="item_32.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<TextBoxControl mnemonic="F" mnemonicKey="filenamepattern_mnemonic.VALUE" property="filenamepattern">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<StaticText text="Subdirectories are also searched" textKey="item_46.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="8" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>
