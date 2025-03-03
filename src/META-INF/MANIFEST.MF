@@ -1,4 +1,5 @@
 Name: GATHERMD
+Display-Name: Gather Multi-dataset Variable Info
 Dialog-Specs: gathermd.spd
 Command-Specs: gathermd.xml
 Code-Files: GATHERMD.py
